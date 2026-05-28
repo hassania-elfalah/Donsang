@@ -22,7 +22,7 @@ export function Navbar({}: NavbarProps) {
   const activeNavItems = (() => {
     const items = [
       { label: "Accueil", path: "/" },
-      { label: "Alertes urgentes", path: "/UrgentAlerts" },
+      { label: "Alertes urgentes", path: "/urgent-alerts" },
       { label: "Contact", path: "/contact" },
     ];
 

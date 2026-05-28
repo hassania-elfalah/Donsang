@@ -40,8 +40,10 @@ import PatientDashboard from "./pages/PatientDashboard.tsx";
 
 const routesConfig = [
   { path: "/", element: <Index /> },
+  { path: "/urgent-alerts", element: <UrgentAlerts /> },
   { path: "/UrgentAlerts", element: <UrgentAlerts /> },
   { path: "/contact", element: <Contact /> },
+  { path: "/Contact", element: <Contact /> },
   { path: "/login", element: <Login /> },
   { path: "/register", element: <Register /> },
   { path: "/forgot-password", element: <ForgotPassword /> },

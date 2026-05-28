@@ -17,8 +17,8 @@ export function Footer() {
             <h4 className="font-semibold mb-3">Navigation</h4>
             <ul className="space-y-2 text-sm text-background/60">
               <li><Link to="/" className="hover:text-background transition-colors">Accueil</Link></li>
-              <li><Link to="/UrgentAlerts" className="hover:text-background transition-colors">alertes urgentes</Link></li>
-              <li><Link to="/Contact" className="hover:text-background transition-colors">Contact</Link></li>
+              <li><Link to="/urgent-alerts" className="hover:text-background transition-colors">alertes urgentes</Link></li>
+              <li><Link to="/contact" className="hover:text-background transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
