@@ -185,6 +185,11 @@ class AuthController extends Controller
 
         if ($user) {
             $user->is_patient = ($user instanceof Patient) ? 1 : 0;
+            if ($request->user_type === 'patient') {
+                $user->user_type = ($user instanceof Patient) ? 'patient' : 'donor';
+            } else {
+                $user->user_type = 'hospital';
+            }
         }
 
         return response()->json([
@@ -218,8 +223,13 @@ class AuthController extends Controller
             ], 404);
         }
 
-        if ($user && $request->user_type === 'patient') {
-            $user->is_patient = ($user instanceof Patient) ? 1 : 0;
+        if ($user) {
+            if ($request->user_type === 'patient') {
+                $user->is_patient = ($user instanceof Patient) ? 1 : 0;
+                $user->user_type = ($user instanceof Patient) ? 'patient' : 'donor';
+            } else {
+                $user->user_type = 'hospital';
+            }
         }
 
         return response()->json([
